@@ -1,5 +1,18 @@
 ---
+const pageTitle = "Über die Neckar-Vital-Apotheken"
 
+const identity = {
+  firstName: "Sarah",
+  country: "Canada",
+  occupation: "Technical Writer",
+  hobbies: ["photography", "birdwatching", "baseball"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,14 +21,19 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
 	<body>
     <a href="/">Startseite</a>
     <a href="/about/">Über uns</a>
     <a href="/aktuell/">Aktuelles</a>
 
-		<h1>Über die Neckar-Vital-Apothkeken</h1>
+		<h1>{pageTitle}</h1>
     <p>Die Keimzelle der Neckar-Vital-Apotheken war die Post-Apotheke Neckarhausen. Im Jahr 2025 kam dann die Schloss-Apotheke Ilvesheim zum Verbund dazu.</p>
-	</body>
+    {happy && <p>I am happy to be learning Astro!</p>}
+
+    {finished && <p>I finished this tutorial!</p>}
+
+    {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}    
+  </body>
 </html>
